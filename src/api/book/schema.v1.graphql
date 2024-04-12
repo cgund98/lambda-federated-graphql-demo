@@ -4,6 +4,11 @@ type Book @key(fields: "id") {
   libraryID: ID!
 }
 
+type Library @key(fields: "id") {
+  id: ID!
+  books: [Book!]! @requires(fields: "id")
+}
+
 type Query {
   books: [Book!]!
   book(id: ID!): Book

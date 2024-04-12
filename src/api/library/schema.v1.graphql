@@ -6,7 +6,7 @@ type Library @key(fields: "id") {
 type Book @key(fields: "id") {
   id: ID!
   libraryID: ID! @external
-  library: Library! @requires(fields: "libraryId")
+  library: Library! @requires(fields: "libraryID")
 }
 
 type Query {

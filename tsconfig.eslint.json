@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "global-types/**/*",
+    "**/*.js",
+    "**/*.ts",
+    "infra/**/*"
+  ],
+  "exclude": ["node_modules", "**/node_modules/*", "pulumi"]
+}
