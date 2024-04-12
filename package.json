@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tsc -noEmit && node build.js",
+    "build": "tsc --project tsconfig.json --noEmit && node build.js",
     "graphql-codegen": "graphql-codegen",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint . --ext ts --fix",
