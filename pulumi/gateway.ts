@@ -1,5 +1,3 @@
-import * as pulumi from '@pulumi/pulumi'
-import * as archive from '@pulumi/archive'
 import * as apigateway from '@pulumi/aws-apigateway'
 import * as aws from '@pulumi/aws'
 import * as fs from 'fs'
