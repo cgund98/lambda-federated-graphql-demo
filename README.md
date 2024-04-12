@@ -7,3 +7,14 @@
 - _Node_: `brew install node`
 - _Pulumi_: `brew install pulumi/tap/pulumi`
 - _Cosmo (wgc)_ `npm install -g wgc@latest`
+
+### Optional Tools
+
+- _pre-commit_: `brew install pre-commit`
+
+### Deploy
+
+```bash
+make build
+make deploy
+```

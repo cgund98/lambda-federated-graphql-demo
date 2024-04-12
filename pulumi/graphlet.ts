@@ -14,6 +14,9 @@ export const lambdaFn = (
   path: string,
   handler: string = 'service.handler',
   runtime: aws.lambda.Runtime = aws.lambda.Runtime.NodeJS18dX,
+  variables: {
+    [key: string]: pulumi.Input<string>
+  } = {},
 ) => {
   const zipOutput = `./dist/${hashPath(path)}.zip`
   const zip = archive.getFile({
@@ -28,11 +31,7 @@ export const lambdaFn = (
     sourceCodeHash: zip.then(zip => zip.outputBase64sha256),
     runtime,
     environment: {
-      variables: {
-        GRAPH_API_TOKEN: '',
-        STAGE: 'v1',
-        DEV_MODE: 'false',
-      },
+      variables,
     },
   })
 

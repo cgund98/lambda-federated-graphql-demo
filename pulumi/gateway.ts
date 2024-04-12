@@ -46,6 +46,11 @@ const routerLambda = graphletAPI.url.apply(async url => {
     '../dist/router',
     'bootstrap',
     aws.lambda.Runtime.CustomAL2023,
+    {
+      GRAPH_API_TOKEN: '',
+      STAGE: 'v1',
+      DEV_MODE: 'false',
+    },
   )
 })
 
