@@ -1,0 +1,10 @@
+type Book @key(fields: "id") {
+  id: ID!
+  contents: String
+  libraryID: ID!
+}
+
+type Query {
+  books: [Book!]!
+  book(id: ID!): Book
+}

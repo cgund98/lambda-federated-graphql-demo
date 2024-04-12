@@ -1,0 +1,10 @@
+version: 1
+subgraphs:
+  - name: library
+    routing_url: http://localhost:4001/graphql
+    schema:
+      file: ./src/api/library/schema.v1.graphql
+  - name: book
+    routing_url: http://localhost:4001/graphql
+    schema:
+      file: ./src/api/book/schema.v1.graphql
