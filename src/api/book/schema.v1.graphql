@@ -1,0 +1,15 @@
+type Book @key(fields: "id") {
+  id: ID!
+  contents: String
+  libraryID: ID!
+}
+
+type Library @key(fields: "id") {
+  id: ID!
+  books: [Book!]! @requires(fields: "id")
+}
+
+type Query {
+  books: [Book!]!
+  book(id: ID!): Book
+}
