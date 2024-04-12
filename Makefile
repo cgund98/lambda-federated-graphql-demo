@@ -1,5 +1,9 @@
 #!make
 
+install:
+	@npm install
+	@cd pulumi && npm install
+
 format:
 	@npm run graphql-codegen
 	@npm run prettier-format
@@ -14,6 +18,7 @@ ifeq ("$(wildcard dist/router/bootstrap)","")
 else
 	@echo "Router bootstrap found."
 endif
+	@npm run graphql-codegen
 	@npm run build
 
 deploy:

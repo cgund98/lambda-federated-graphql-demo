@@ -12,6 +12,12 @@
 
 - _pre-commit_: `brew install pre-commit`
 
+### Install NPM dependencies
+
+```bash
+make install
+```
+
 ### Deploy
 
 ```bash
