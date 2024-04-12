@@ -5,8 +5,7 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint . --ext ts --fix",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "prettier-check": "prettier --config .prettierrc 'src/**/*.ts' --check",
-    "compose": "mkdir -p dist/router && wgc router compose -i compose.yaml -o dist/router/router.json"
+    "prettier-check": "prettier --config .prettierrc 'src/**/*.ts' --check"
   },
   "name": "pulumi-serverless-aws-typescript",
   "devDependencies": {
